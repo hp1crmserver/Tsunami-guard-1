@@ -1,0 +1,6 @@
+{
+  "name": "MareAlerta",
+  "description": "Sistema internacional de monitoreo de alertas, avisos y boletines de tsunami en tiempo real con capas cartográficas Esri, notificaciones audiovisuales, historial de severidad y exportación PDF e imagen 4:5.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

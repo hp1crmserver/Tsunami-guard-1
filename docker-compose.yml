@@ -1,0 +1,44 @@
+name: tsunami-guard
+services:
+  tsunami-guard:
+    build: .
+    container_name: tsunami-guard
+    restart: unless-stopped
+    ports:
+      - "3050:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    x-casaos:
+      architectures:
+        - amd64
+        - arm64
+      main: tsunami-guard
+      port_map: "3050"
+      title:
+        en_us: Tsunami Guard
+        es_es: Tsunami Guard
+      tagline:
+        en_us: International Tsunami Monitoring & Bulletins
+        es_es: Monitoreo Internacional de Tsunamis
+      description:
+        en_us: Real-time tsunami warning monitor with Esri map layers, audio/visual alerts, history filters, 4:5 image cards and PDF export.
+        es_es: Plataforma de vigilancia de tsunamis con capas Esri, alertas audiovisuales, historial por severidad y exportación en PDF e imagen 4:5.
+      index: /
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: tsunami-guard
+  port_map: "3050"
+  title:
+    en_us: Tsunami Guard
+    es_es: Tsunami Guard
+  index: /
