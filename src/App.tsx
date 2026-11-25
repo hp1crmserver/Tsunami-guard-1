@@ -274,7 +274,7 @@ export default function App() {
             </span>
             <span>Tsunami Guard</span>
             <span className="text-[11px] font-mono font-medium text-slate-700 ml-0.5">
-              v1.0.0
+              v1.1
             </span>
           </a>
 

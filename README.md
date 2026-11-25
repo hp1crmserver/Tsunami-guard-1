@@ -1,4 +1,4 @@
-# Tsunami Guard (v1.0.0)
+# Tsunami Guard (v1.1)
 
 Sistema internacional de monitoreo de alertas, avisos y boletines de tsunami en tiempo real (PTWC, NTWC, NWS CAP, JMA, USGS, EMSC y GeoNet) con capas cartográficas Esri, notificaciones visuales/auditivas, generador gráfico 4:5, historial filtrable y exportación en PDF e imagen PNG.
 
@@ -13,7 +13,7 @@ Desde la carpeta del proyecto en tu PC (o descomprimiendo el ZIP):
 ```bash
 git init
 git add .
-git commit -m "Initial release: Tsunami Guard v1.0.0"
+git commit -m "Release Tsunami Guard v1.1"
 git branch -M main
 git remote add origin https://github.com/TU_USUARIO/tsunami-guard.git
 git push -u origin main

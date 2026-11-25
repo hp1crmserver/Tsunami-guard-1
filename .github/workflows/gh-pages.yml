@@ -24,7 +24,9 @@ jobs:
         run: npm install --legacy-peer-deps --no-audit --no-fund
 
       - name: Build production bundle
-        run: npm run build
+        run: |
+          npm run build
+          touch dist/.nojekyll
 
       - name: Publish dist/ to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

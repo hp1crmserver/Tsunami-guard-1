@@ -15,7 +15,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PORT = Number(process.env.PORT || 3000);
-const USER_AGENT = 'TsunamiGuard/1.0 (tsunami-telemetry-monitor)';
+const USER_AGENT = 'TsunamiGuard/1.1 (tsunami-telemetry-monitor)';
 
 let cachedFeed: { data: TsunamiFeedResponse; timestamp: number } | null = null;
 const CACHE_TTL_MS = 45_000;
